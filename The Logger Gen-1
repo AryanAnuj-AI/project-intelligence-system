@@ -1,0 +1,324 @@
+# Workflow-Based Intelligence System:
+Name : The Logger gen-1
+
+## 🎯 **The Flow Logic:**
+
+1. **Check NEXT_TASK.md** → What should I work on?
+2. **Check TASK_TRACKER.md** → Where did I leave off?
+3. **Check PRD.md** → Does current work align with vision?
+4. **IF aligned** → Execute next task
+5. **IF misaligned** → Check ERROR_LOGS.md + PROJECT_EVOLUTION.md to understand why
+6. **Understand context** → Plan → Execute
+7. **Update relevant files** based on what happened
+
+---
+
+## 🚀 **Quick Start (2 minutes)**
+
+### **Step 1: Create Files**
+```bash
+touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PROJECT_FILES.md
+```
+
+### **Step 2: Start Your Workflow**
+1. **Define your vision** in PRD.md
+2. **Set your next task** in NEXT_TASK.md
+3. **Track your progress** in TASK_TRACKER.md
+4. **Follow the flow logic** above
+
+---
+
+## 📋 **Core Files & Templates**
+
+### **NEXT_TASK.md** - What Should I Work On?
+```markdown
+# Next Task
+
+## Current Priority
+**Task**: [What you're working on right now]
+**Why**: [Why this is the priority]
+**Expected Outcome**: [What success looks like]
+
+## Queue
+- [ ] [Next task 1]
+- [ ] [Next task 2]
+- [ ] [Next task 3]
+
+## Blocked By
+- [Any blockers preventing progress]
+
+---
+*Update this whenever you complete a task or priorities change.*
+```
+
+### **TASK_TRACKER.md** - Where Did I Leave Off?
+```markdown
+# Task Tracker
+
+## Today's Work
+**Date**: [Date]
+**Started**: [Time]
+**Current Task**: [What you're working on]
+
+## Progress Log
+- [Time] - [What you did]
+- [Time] - [What you did]
+- [Time] - [What you did]
+
+## Completed Today
+- [ ] [Task 1] - [Notes]
+- [ ] [Task 2] - [Notes]
+
+## Left Off At
+- [Exactly where you stopped]
+- [What you were about to do next]
+
+---
+*Update this throughout your work session.*
+```
+
+### **PRD.md** - Project Requirements Document
+```markdown
+# Project Requirements Document
+
+## Vision
+**What are we building?**: [Clear description]
+**Why are we building it?**: [Purpose and motivation]
+**Who is it for?**: [Target users]
+
+## Goals
+- [Goal 1]
+- [Goal 2]
+- [Goal 3]
+
+## Success Criteria
+- [ ] [Criterion 1]
+- [ ] [Criterion 2]
+- [ ] [Criterion 3]
+
+## Current Phase
+**Phase**: [Setup/Development/Testing/Deployment]
+**Focus**: [What we're prioritizing right now]
+
+---
+*This is your project vision. Check alignment before major decisions.*
+```
+
+### **ERROR_LOGS.md** - What Went Wrong & Why?
+```markdown
+# Error Logs
+
+## [Date] - [Error Description]
+**What Happened**: [Description]
+**Why It Happened**: [Root cause]
+**How I Fixed It**: [Solution]
+**How to Prevent**: [Prevention strategy]
+**Alignment Check**: [Did this affect project vision?]
+
+## [Date] - [Error Description]
+**What Happened**: [Description]
+**Why It Happened**: [Root cause]
+**How I Fixed It**: [Solution]
+**How to Prevent**: [Prevention strategy]
+**Alignment Check**: [Did this affect project vision?]
+
+---
+*Log errors immediately. Use for alignment checks.*
+```
+
+### **PROJECT_EVOLUTION.md** - How Has the Project Changed?
+```markdown
+# Project Evolution
+
+## [Date] - [Change Description]
+**What Changed**: [What was modified/added/removed]
+**Why It Changed**: [Reason for the change]
+**Impact on Vision**: [How this affects the original plan]
+**New Requirements**: [Any new needs that emerged]
+
+## [Date] - [Change Description]
+**What Changed**: [What was modified/added/removed]
+**Why It Changed**: [Reason for the change]
+**Impact on Vision**: [How this affects the original plan]
+**New Requirements**: [Any new needs that emerged]
+
+---
+*Track how your project evolves from the original vision.*
+```
+
+### **PROJECT_FILES.md** - File Reference & CRUD Tracking
+```markdown
+# Project Files Reference
+
+## Core Workflow Files
+- `NEXT_TASK.md` - Current task and priorities
+- `TASK_TRACKER.md` - Daily progress tracking
+- `PRD.md` - Project vision and requirements
+- `ERROR_LOGS.md` - Error tracking and solutions
+- `PROJECT_EVOLUTION.md` - Project change history
+- `PROJECT_FILES.md` - This file (file reference)
+
+## Project Files
+- [List all project files here]
+
+## File Relationships
+- [Document how files connect and depend on each other]
+
+## Recent File Changes
+- [Date] - [File] - [Action: Created/Modified/Deleted] - [Reason]
+
+---
+*This file tracks all project files and their relationships. Update whenever files are created, modified, or deleted.*
+```
+
+---
+
+## 🔄 **The Workflow in Action**
+
+### **Starting Your Day**
+1. **Open NEXT_TASK.md** - See what you should work on
+2. **Open TASK_TRACKER.md** - Remember where you left off
+3. **Quick PRD check** - Ensure alignment with vision
+4. **Start working** - Execute your next task
+
+### **File CRUD Operations**
+**When you create a new file:**
+1. **Create the file**
+2. **Update PROJECT_FILES.md** - Add to "Project Files" section
+3. **Update PROJECT_FILES.md** - Add to "Recent File Changes"
+4. **Update PROJECT_FILES.md** - Document relationships if any
+
+**When you modify a file:**
+1. **Make your changes**
+2. **Update PROJECT_FILES.md** - Add to "Recent File Changes"
+3. **Update PROJECT_FILES.md** - Update relationships if changed
+
+**When you delete a file:**
+1. **Delete the file**
+2. **Update PROJECT_FILES.md** - Remove from "Project Files" section
+3. **Update PROJECT_FILES.md** - Add to "Recent File Changes"
+4. **Update PROJECT_FILES.md** - Remove from relationships
+
+### **During Work**
+1. **Update TASK_TRACKER.md** as you progress
+2. **Log errors** in ERROR_LOGS.md immediately
+3. **Note changes** in PROJECT_EVOLUTION.md if vision shifts
+4. **Update PROJECT_FILES.md** when creating/modifying/deleting files
+5. **Check alignment** if you feel stuck
+
+### **When You Get Stuck**
+1. **Check ERROR_LOGS.md** - Have you seen this before?
+2. **Check PROJECT_EVOLUTION.md** - Has the vision changed?
+3. **Re-read PRD.md** - Are you still aligned?
+4. **Update NEXT_TASK.md** - Adjust priorities if needed
+
+### **End of Day**
+1. **Complete TASK_TRACKER.md** - Document where you stopped
+2. **Update NEXT_TASK.md** - Set tomorrow's priority
+3. **Review alignment** - Are you still on track?
+
+---
+
+## 🎯 **Alignment Checks**
+
+### **Before Major Decisions**
+- **Check PRD.md** - Does this align with vision?
+- **Check ERROR_LOGS.md** - Have we tried this before?
+- **Check PROJECT_EVOLUTION.md** - How has the project changed?
+
+### **When Feeling Lost**
+- **Re-read PRD.md** - What are we actually building?
+- **Check NEXT_TASK.md** - What should I focus on?
+- **Review ERROR_LOGS.md** - What patterns am I repeating?
+
+### **When Priorities Feel Wrong**
+- **Check PROJECT_EVOLUTION.md** - Has the vision evolved?
+- **Update PRD.md** if needed - Is the vision still correct?
+- **Adjust NEXT_TASK.md** - Set new priorities
+
+---
+
+## 🤖 **AI Assistant Integration**
+
+### **For Cursor/Claude/GPT**
+When working with AI assistants:
+
+1. **Share PRD.md** - Give them your vision
+2. **Share NEXT_TASK.md** - Tell them your current focus
+3. **Share TASK_TRACKER.md** - Show them where you left off
+4. **Share PROJECT_FILES.md** - Show them all project files and relationships
+5. **Ask for alignment check** - "Does this align with our vision?"
+6. **Update files** based on their suggestions
+7. **Update PROJECT_FILES.md** if they suggest new files or changes
+
+### **AI Communication Template**
+```
+"Here's my project vision (PRD.md), my current task (NEXT_TASK.md), 
+where I left off (TASK_TRACKER.md), and all project files (PROJECT_FILES.md). 
+
+Can you help me with [specific question] while ensuring 
+we stay aligned with the vision?"
+```
+
+---
+
+## 💡 **Pro Tips**
+
+### **Keep It Simple**
+- **Update TASK_TRACKER.md** every 30 minutes
+- **Log errors immediately** - don't wait
+- **Check alignment** when you feel stuck
+- **Trust the flow** - it works
+
+### **When to Update Each File**
+- **NEXT_TASK.md** - When priorities change
+- **TASK_TRACKER.md** - Throughout your work session
+- **PRD.md** - When vision changes (rarely)
+- **ERROR_LOGS.md** - When something breaks
+- **PROJECT_EVOLUTION.md** - When requirements change
+- **PROJECT_FILES.md** - When files are created, modified, or deleted
+
+### **Signs You're Off Track**
+- You haven't checked PRD.md in days
+- You're working on tasks not in NEXT_TASK.md
+- You keep making the same errors
+- You can't remember where you left off
+
+---
+
+## 🌟 **Why This Works**
+
+### **Clear Decision Points**
+- **What to work on** (NEXT_TASK.md)
+- **Where you are** (TASK_TRACKER.md)
+- **Why you're doing it** (PRD.md)
+- **What went wrong** (ERROR_LOGS.md)
+- **How things changed** (PROJECT_EVOLUTION.md)
+
+### **Built-in Alignment Checks**
+- **Vision alignment** before major decisions
+- **Error pattern recognition** to prevent repeats
+- **Evolution tracking** to understand changes
+- **Progress visibility** to stay motivated
+
+### **AI-Friendly Structure**
+- **Clear context** for AI assistants
+- **Structured information** they can understand
+- **Alignment checks** they can help with
+- **Progress tracking** they can reference
+
+---
+
+## 🚀 **Get Started Now**
+
+1. **Create the 5 files** using the templates above
+2. **Fill out PRD.md** with your project vision
+3. **Set your first task** in NEXT_TASK.md
+4. **Start working** and follow the flow logic
+5. **Trust the system** - it will guide you
+
+---
+
+*This workflow-based intelligence system transforms any project into a guided, aligned, and continuously improving experience.*
+
+**The flow logic creates clear decision points and built-in alignment checks that prevent you from getting lost or working on the wrong things.** 
