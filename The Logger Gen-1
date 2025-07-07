@@ -1,5 +1,41 @@
-# Workflow-Based Intelligence System:
-Name : The Logger gen-1
+# Workflow-Based Intelligence System  
+**Name:** The Logger gen-1
+
+The Logger Gen-1 always checks for a `PRD.md` (Project Requirements Document) at the start of every session. If it doesn't exist, you'll be prompted to create one using the template below.  
+The logger also ensures all other workflow files are present, creating them if missing. This guarantees you never start work without project vision and context.
+
+---
+
+## 🚨 If PRD.md is Missing: Use AI to Create It (Do This Outside Cursor!)
+
+**Do NOT proceed until PRD.md exists.**
+
+1. **Use ChatGPT (or any LLM) to get a high-level summary of your project:**
+   - Paste your README, main code, or any available docs and ask:  
+     _"Summarize the purpose, main features, and goals of this project."_
+
+2. **Copy the summary to Claude (free version) and ask:**  
+   _"Using this summary, create a Project Requirements Document (PRD) in markdown format with sections for Vision, Goals, Success Criteria, and Current Phase."_
+
+3. **Review and edit the PRD draft to ensure it matches your project's intent.**
+
+4. **Save the final version as `PRD.md` in your project root.**
+
+5. **Only then proceed with the rest of the logger workflow.**
+
+**Why?**  
+- Cursor and most AI tools work best when a clear PRD is present.
+- Creating the PRD outside Cursor ensures you have a strong, human-reviewed project vision before you start logging tasks or progress.
+
+**Remember:**  
+- The logger will not function as intended without a PRD.md.
+- Always keep PRD.md up to date as your project evolves.
+
+---
+
+> This ensures every user, new or returning, always starts with a clear, AI-generated, and human-reviewed project vision!
+
+---
 
 ## 🎯 **The Flow Logic:**
 
@@ -38,11 +74,12 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 **Task**: [What you're working on right now]
 **Why**: [Why this is the priority]
 **Expected Outcome**: [What success looks like]
+**Tags:** [tag1, tag2, tag3]
 
 ## Queue
-- [ ] [Next task 1]
-- [ ] [Next task 2]
-- [ ] [Next task 3]
+- [ ] [Next task 1] **Tags:** [tag1, tag2]
+- [ ] [Next task 2] **Tags:** [tag1, tag2]
+- [ ] [Next task 3] **Tags:** [tag1, tag2]
 
 ## Blocked By
 - [Any blockers preventing progress]
@@ -59,15 +96,16 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 **Date**: [Date]
 **Started**: [Time]
 **Current Task**: [What you're working on]
+**Tags:** [tag1, tag2, tag3]
 
 ## Progress Log
-- [Time] - [What you did]
-- [Time] - [What you did]
-- [Time] - [What you did]
+- [Time] - [What you did] **Tags:** [tag1, tag2]
+- [Time] - [What you did] **Tags:** [tag1, tag2]
+- [Time] - [What you did] **Tags:** [tag1, tag2]
 
 ## Completed Today
-- [ ] [Task 1] - [Notes]
-- [ ] [Task 2] - [Notes]
+- [ ] [Task 1] - [Notes] **Tags:** [tag1, tag2]
+- [ ] [Task 2] - [Notes] **Tags:** [tag1, tag2]
 
 ## Left Off At
 - [Exactly where you stopped]
@@ -85,20 +123,22 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 **What are we building?**: [Clear description]
 **Why are we building it?**: [Purpose and motivation]
 **Who is it for?**: [Target users]
+**Tags:** [tag1, tag2, tag3]
 
 ## Goals
-- [Goal 1]
-- [Goal 2]
-- [Goal 3]
+- [Goal 1] **Tags:** [tag1, tag2]
+- [Goal 2] **Tags:** [tag1, tag2]
+- [Goal 3] **Tags:** [tag1, tag2]
 
 ## Success Criteria
-- [ ] [Criterion 1]
-- [ ] [Criterion 2]
-- [ ] [Criterion 3]
+- [ ] [Criterion 1] **Tags:** [tag1, tag2]
+- [ ] [Criterion 2] **Tags:** [tag1, tag2]
+- [ ] [Criterion 3] **Tags:** [tag1, tag2]
 
 ## Current Phase
 **Phase**: [Setup/Development/Testing/Deployment]
 **Focus**: [What we're prioritizing right now]
+**Tags:** [tag1, tag2]
 
 ---
 *This is your project vision. Check alignment before major decisions.*
@@ -114,6 +154,7 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 **How I Fixed It**: [Solution]
 **How to Prevent**: [Prevention strategy]
 **Alignment Check**: [Did this affect project vision?]
+**Tags:** [bug, urgent, backend, etc.]
 
 ## [Date] - [Error Description]
 **What Happened**: [Description]
@@ -121,6 +162,7 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 **How I Fixed It**: [Solution]
 **How to Prevent**: [Prevention strategy]
 **Alignment Check**: [Did this affect project vision?]
+**Tags:** [bug, urgent, backend, etc.]
 
 ---
 *Log errors immediately. Use for alignment checks.*
@@ -135,12 +177,14 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 **Why It Changed**: [Reason for the change]
 **Impact on Vision**: [How this affects the original plan]
 **New Requirements**: [Any new needs that emerged]
+**Tags:** [refactor, feature, scope, etc.]
 
 ## [Date] - [Change Description]
 **What Changed**: [What was modified/added/removed]
 **Why It Changed**: [Reason for the change]
 **Impact on Vision**: [How this affects the original plan]
 **New Requirements**: [Any new needs that emerged]
+**Tags:** [refactor, feature, scope, etc.]
 
 ---
 *Track how your project evolves from the original vision.*
@@ -159,16 +203,41 @@ touch NEXT_TASK.md TASK_TRACKER.md PRD.md ERROR_LOGS.md PROJECT_EVOLUTION.md PRO
 - `PROJECT_FILES.md` - This file (file reference)
 
 ## Project Files
-- [List all project files here]
+- [List all project files here] **Tags:** [tag1, tag2]
 
 ## File Relationships
-- [Document how files connect and depend on each other]
+- [Document how files connect and depend on each other] **Tags:** [tag1, tag2]
 
 ## Recent File Changes
-- [Date] - [File] - [Action: Created/Modified/Deleted] - [Reason]
+- [Date] - [File] - [Action: Created/Modified/Deleted] - [Reason] **Tags:** [tag1, tag2]
 
 ---
 *This file tracks all project files and their relationships. Update whenever files are created, modified, or deleted.*
+```
+
+---
+
+# RULES.md – Workflow & Semantic Tagging Rules
+
+```markdown
+# Logger Gen-1 Rules
+
+## 1. Semantic Tagging
+- Every entry in NEXT_TASK.md, TASK_TRACKER.md, ERROR_LOGS.md, and PROJECT_EVOLUTION.md should include a **Tags:** field.
+- Tags should be short keywords or phrases that describe the context, topic, or type of entry (e.g., `auth`, `bug`, `feature`, `urgent`, `frontend`, `backend`).
+- This enables fast searching, filtering, and AI understanding.
+
+## 2. File Creation & CRUD
+- Whenever a new file is created, modified, or deleted, update PROJECT_FILES.md and include semantic tags for the file's purpose and relationships.
+
+## 3. PRD Enforcement
+- The logger must not proceed unless PRD.md exists and is up to date.
+
+## 4. Flow Logic Enforcement
+- Always follow the flow logic as described in the main documentation.
+- If a new workflow pattern emerges, add it to this RULES.md file.
+
+---
 ```
 
 ---
